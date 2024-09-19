@@ -91,6 +91,15 @@ The task asks that I do a different implementation on each day.
 
 We are doing a binary chop and slicing an array into two parts, then continuing
 to operate on those two parts -- it seems wise to use recursion, which maintains
-state of each of the slices.
+state of each of the `lo`, `mid` and `hi` variables.
 
-> See [the source code](./src/bin/day01.rs).
+> See [the source code](./src/day02.rs).
+
+### Day 2
+
+Instead of using recursion (which has a bit of a function overhead), today I decided
+to use iteration, and just updating the `lo`, `mid` and `hi` variables. Another
+benefit, besides reduced function overhead, is that I'm rewriting the same variables,
+so constant memory is used (the recursive approach would increase memory usage logarithmically).
+
+> See [the source code](./src/day02.rs).
