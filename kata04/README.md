@@ -38,3 +38,21 @@ Was the way you wrote the second program influenced by writing the first?
 
 Is factoring out as much common code as possible always a good thing? Did the readability
 of the programs suffer because of this requirement? How about the maintainability?
+
+## Solutions/Working-out
+
+1. When writing the original programs, individually, I was understanding their
+   individual needs -- for example, the weather file has 2-row header, and a footer
+   too, both which are irrelevant when parsing the spreads. I also saw from the
+   football file that some tables have rows in the middle which should be ignored.
+   If I had tried to preemptively factor out common code, I may not have spotted
+   these until later, and then had to refactor the library code (and hence also
+   refactor the dependent binaries).
+2. Yes -- when writing the football file, I copied the structure from the weather
+   file and only changed a few lines and variables names.
+3. As explained before, it might be best not to preemptively factor out common code
+   until you can show that two functions share common functionality. This is because
+   abstracting early can cause problems when the function interface (e.g. for `get_min_spread`)
+   changes. That said, the readability of the weather and football files becomes
+   easier when you can hide complexity behind a library file, which likely comes
+   at a cost for maintainability.
