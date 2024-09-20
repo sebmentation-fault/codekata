@@ -103,3 +103,13 @@ benefit, besides reduced function overhead, is that I'm rewriting the same varia
 so constant memory is used (the recursive approach would increase memory usage logarithmically).
 
 > See [the source code](./src/day02.rs).
+
+### Day 3
+
+I had to look back at the description to get some inspiration for this next approach
+-- so naturally I've decided to try this functional style approach with array slices
+and return back to recursion. This was really fun to write -- took me a moment to
+remember that I need to add the mid index back into the result (when chopping above
+the mid).
+
+> See [the source code](./src/day03.rs).

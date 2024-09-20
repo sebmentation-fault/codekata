@@ -1,12 +1,12 @@
 // yesterday i used recursion, so today lets try doing this iteratively
 pub fn chop(n: isize, ns: Vec<isize>) -> Option<usize> {
-    if ns.len() == 0 {
+    if ns.is_empty() {
         return None;
     }
 
     let mut lo: usize = 0;
     let mut hi: usize = ns.len() - 1;
-    let mut mid: usize = (0 + ns.len()) / 2;
+    let mut mid: usize = ns.len() / 2;
     let mut mid_val: isize = *ns.get(mid).expect("mid not in array?!");
 
     while n != mid_val {
