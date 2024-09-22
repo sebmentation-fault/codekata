@@ -113,3 +113,19 @@ remember that I need to add the mid index back into the result (when chopping ab
 the mid).
 
 > See [the source code](./src/day03.rs).
+
+### Day 4
+
+Today I decided to try to merge the previous two approaches -- the functional style
+of slicing the array and the iterative approach.
+
+Quite fun overall, and I can imagine that it is very efficient computationally too.
+
+> See [the source code](./src/day04.rs).
+
+### Day 5
+
+That's a bummer. I was truely hoping that Copilot would come up with a broken solution
+that I could debug and fix, but it didn't. Going foward, I'm not going to be using it.
+
+> See [the source code](./src/day05.rs).

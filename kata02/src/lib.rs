@@ -2,13 +2,11 @@ pub mod day01;
 pub mod day02;
 pub mod day03;
 pub mod day04;
+pub mod day05;
 
 #[cfg(test)]
 mod tests {
-    use crate::day01;
-    use crate::day02;
-    use crate::day03;
-    use crate::day04;
+    use crate::{day01, day02, day03, day04, day05};
 
     fn test_chop(chop_fn: fn(isize, Vec<isize>) -> Option<usize>) {
         assert_eq!(None, chop_fn(3, vec![]));
@@ -52,5 +50,10 @@ mod tests {
     #[test]
     fn test_day04() {
         test_chop(day04::chop);
+    }
+
+    #[test]
+    fn test_day05() {
+        test_chop(day05::chop);
     }
 }
